@@ -26,11 +26,11 @@ rm "$filename.iso"
 mv "$filename.iso.dec" "$filename.iso"
 
 clear
-echo "${YELLOW}ISO is decrypted${NOCOLOR}"
+echo -e "${YELLOW}ISO is decrypted${NOCOLOR}"
 
 if [ "$2" == "-e" ]; then
 clear
-echo "${YELLOW}Need root to mount iso and make changes${NOCOLOR}"
+echo -e "${YELLOW}Need root to mount iso and make changes${NOCOLOR}"
 sudo mkdir /mnt/"$filename"
 sudo mount "$filename.iso" /mnt/"$filename"
 sleep 0.5
@@ -43,5 +43,5 @@ sudo umount /mnt/"$filename"
 sudo rm -r /mnt/"$filename"
 rm "$filename.iso"
 clear
-echo "${YELLOW}Game is now playable in RPCS3${NOCOLOR}"
+echo -e "${YELLOW}Game is now playable in RPCS3${NOCOLOR}"
 fi
