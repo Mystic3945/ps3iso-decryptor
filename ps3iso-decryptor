@@ -17,8 +17,6 @@ filename="${file%.*}"
 key=$(less /usr/local/lib/PS3-ISO-DKEYS/"$filename.dkey")
 key=$(echo "$key" | tr -d '\r')
 
-echo $filename
-
 PS3Dec d key "$key" "$filename.iso"
 
 rm "$filename.iso"
